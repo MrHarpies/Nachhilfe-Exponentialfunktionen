@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<head>
+<meta name = "viewport" content = "initial-scale = 1.0, maximum-scale = 2.0, user-scalable = yes, width = device-width">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Exponential Funktionen - Nachhilfe</title>
+<style>
+<!--
+html {
+	height: 100%;
+}
+body {
+	background: #444;
+	background: radial-gradient(white, black);
+	background: -webkit-radial-gradient(white, black); /* kludge: for old Safari on Win */
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+/* Slide ------------------------- */
+#slide {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+#slide td {
+	vertical-align: middle;
+	text-align: center;
+}
+#activeSlide {
+	border: none;
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+	image-rendering: auto;
+	
+}
+
+/* Navigation buttons ------------------------- */
+#navigation div {
+	position: fixed;
+	top: 5px;
+	height: 50px;
+	width: 50px;
+	border: 2px solid #000;
+	z-index: 100;
+	line-height: 50px;
+	text-align: center;
+	display: table-cell;
+	font-size: 36px;
+	background-color: #fff;
+	cursor: pointer;
+}
+#tocIcon {
+	left: 5px;
+}
+#previousIcon {
+	right: 60px;
+}
+#previousIcon:hover {
+	background-color: #999;
+}
+#nextIcon {
+	right: 5px;
+}
+#nextIcon:hover {
+	background-color: #999;
+}
+#previousIcon, #nextIcon {
+	font-size: 24px !important;
+}
+
+/* Table of Contents popup ------------------------- */
+#toc {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-color: #e7eaf0;
+	width: 200px;
+	height: 100%;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	border-right: 1px solid #929292;
+	z-index: 1000;
+}
+#toc ul {
+	margin: 0;
+	padding: 0;
+	font-family: HelveticaNeue, Helvetica, Arial, Verdana, sans-serif;
+	font-size: 11px;
+	list-style-type: none;
+}
+#toc ul li {
+	margin: 8px;
+	white-space: nowrap;
+}
+#toc ul li a {
+	color: #000;
+	text-decoration: none;
+}
+#toc ul li a:hover {
+	color: #0A6DBF;
+	text-decoration: underline;
+}
+#toc ul li img {
+	margin-right: 5px;
+	vertical-align: middle;
+	border: none;
+	width: 50px;
+}
+-->
+</style>
+<script type="text/javascript">
+var isTouchDevice = 'ontouchstart' in document.documentElement;
+var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+var currentSlideIndex = 0;
+var projectTitle = "Exponential Funktionen - Nachhilfe";
+var slides = new Array();  
+var slideHierarchy = [
+		{
+			title: "Exponentielles Wachstum",
+			uuid: "E348D7A9-3892-4D8F-93F2-192D7B8F6A81",
+			tags: [],
+			image: "Contents/Exponentielles%20Wachs-e348d7a9-3892-4d8f-93f2-192d7b8f6a81.png?nocache=732978361",
+			imageSize: { width: 4545.000000, height: 2122.000000 },
+			thumbnail: "Contents/Exponentielles%20Wachs-e348d7a9-3892-4d8f-93f2-192d7b8f6a81-Thumb.png?nocache=732978361",
+			imagemap: [
+				{
+					href: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Potenz%2C_Wurzel_und_Logarithmus.svg/1920px-Potenz%2C_Wurzel_und_Logarithmus.svg.png",
+					tags: [],
+					shape: "polygon",
+					coords: "2944,633 3308,633 3308,997 2944,997",
+				},
+				{
+					href: "Documents/Bildschirmfoto%202024--646264f6-89ed-4f40-834c-116fb6bdaaf0/Bildschirmfoto%202024-03-19%20um%2013.35.50.png",
+					tags: [],
+					shape: "polygon",
+					coords: "1962,580 2475,580 2475,1006 1962,1006",
+				},
+				{
+					href: "Documents/Equation-a770b660-ba0e-4474-8378-4539428fc58d/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "817,130 963,130 963,172 817,172",
+				},
+				{
+					href: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fstudyflix.de%2Fmathematik%2Fexponentialfunktion-1934&psig=AOvVaw1r3nMfan0R6T8uA51rLyqe&ust=1710514702912000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCMD1-f2B9IQDFQAAAAAdAAAAABAD",
+					tags: [],
+					shape: "polygon",
+					coords: "1105,374 1486,374 1486,641 1105,641",
+				},
+				{
+					href: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flaticon.com%2Fde%2Fkostenloses-icon%2Fbakterien_1233841&psig=AOvVaw1JAjeVJMKPLrsfWENWUD9D&ust=1710514570630000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCOjpgb-B9IQDFQAAAAAdAAAAABAg",
+					tags: [],
+					shape: "polygon",
+					coords: "1032,350 1158,350 1158,476 1032,476",
+				},
+				{
+					href: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.lpb-bw.de%2Fcoronavirus-covid-19&psig=AOvVaw1GoR8507PgR_rzsSUve4Ux&ust=1710514488378000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCNiH2ZaB9IQDFQAAAAAdAAAAABAV",
+					tags: [],
+					shape: "polygon",
+					coords: "1395,574 1577,574 1577,685 1395,685",
+				},
+				{
+					href: "Documents/Equation-796b9670-8308-4188-be3b-4de2ecc53bd3/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "1466,461 1633,461 1633,558 1466,558",
+				},
+				{
+					href: "Documents/Bildschirmfoto%202024--7733afb9-e71a-450c-bb70-1f346845beaf/Bildschirmfoto%202024-03-14%20um%2015.49.10.png",
+					tags: [],
+					shape: "polygon",
+					coords: "1453,19 1944,19 1944,82 1453,82",
+				},
+				{
+					href: "Documents/Equation-2df7c3af-b26c-4853-a9a1-239b7bc47418/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "1597,543 1725,543 1725,607 1597,607",
+				},
+				{
+					href: "Documents/Equation-d002f21e-c852-4b51-90e5-b2b50b224a20/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "562,311 793,311 793,353 562,353",
+				},
+				{
+					href: "Documents/Equation-581c8029-a6f2-49b8-8b06-91832d8412b9/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "817,63 886,63 886,110 817,110",
+				},
+				{
+					href: "Documents/Equation-d682cf14-d7ec-4f1c-9a20-3b7ab4d60dd0/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "562,372 756,372 756,414 562,414",
+				},
+				{
+					href: "Documents/Equation-a4855de5-45ad-4979-bec6-92415feb353d/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "562,444 718,444 718,486 562,486",
+				},
+				{
+					href: "Documents/untitled-polypad-b141431e-8aae-4181-80d6-c3cb3bd8172b/untitled-polypad.png",
+					tags: [],
+					shape: "polygon",
+					coords: "30,41 498,41 498,234 30,234",
+				},
+				{
+					href: "Documents/Equation-a3394157-059d-49e0-9a61-9a47228a5865/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "175,126 191,126 191,142 175,142",
+				},
+				{
+					href: "Documents/Equation-68dd3f60-74c6-442b-b4b0-57c7838c6642/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "329,133 349,133 349,142 329,142",
+				},
+				{
+					href: "https://www.desmos.com/calculator/h7kwjhrvxv",
+					tags: [],
+					shape: "polygon",
+					coords: "1824,93 2157,93 2157,453 1824,453",
+				},
+				{
+					href: "https://qph.cf2.quoracdn.net/main-qimg-9c550c92add8c6d7601bc5a7fe49138d",
+					tags: [],
+					shape: "polygon",
+					coords: "927,1255 1327,1255 1327,1655 927,1655",
+				},
+				{
+					href: "Documents/Equation-45d90bf2-8e44-4a65-82a4-9152c53561ab/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "1242,1507 1447,1507 1447,1619 1242,1619",
+				},
+				{
+					href: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Leonhard_Euler_2.jpg/220px-Leonhard_Euler_2.jpg",
+					tags: [],
+					shape: "polygon",
+					coords: "1221,1143 1441,1143 1441,1418 1221,1418",
+				},
+				{
+					href: "Documents/Equation-959dbad9-cb04-41e7-81fb-5ec490983b9e/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "898,1279 1046,1279 1046,1320 898,1320",
+				},
+				{
+					href: "Documents/Equation-2267e93e-7981-4ae2-a5d3-462fe3476991/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "202,1206 226,1206 226,1229 202,1229",
+				},
+				{
+					href: "Documents/Equation-7d1a594f-611c-49f1-badc-1b805d38b913/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "366,1206 453,1206 453,1229 366,1229",
+				},
+				{
+					href: "Documents/Equation-85d32b35-a814-4757-91d3-34d7656e0dd1/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "202,1143 250,1143 250,1172 202,1172",
+				},
+				{
+					href: "Documents/Equation-fb424cf5-0189-44dc-afdf-812d10bb4ad5/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "384,1143 440,1143 440,1173 384,1173",
+				},
+				{
+					href: "https://www.desmos.com/calculator/2rk2mgijry",
+					tags: [],
+					shape: "polygon",
+					coords: "563,1517 897,1517 897,1878 563,1878",
+				},
+				{
+					href: "Documents/Equation-4ec00fe2-6f07-4150-a81a-bbc4b14a322b/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "1317,1674 1496,1674 1496,1784 1317,1784",
+				},
+				{
+					href: "Documents/Bildschirmfoto%202024--18b7baaf-1df7-4df7-b949-49020bf6b1e2/Bildschirmfoto%202024-03-21%20um%2014.12.06.png",
+					tags: [],
+					shape: "polygon",
+					coords: "2626,101 3237,101 3237,381 2626,381",
+				},
+				{
+					href: "Documents/Equation-865af0a1-2ce6-4e9c-a74a-7efc7044e19c/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "2655,750 2670,750 2670,771 2655,771",
+				},
+				{
+					href: "Documents/Equation-e464560d-529c-4e67-8ff4-b67992106fd0/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "2645,781 2680,781 2680,810 2645,810",
+				},
+				{
+					href: "Documents/Equation-d4f1b20a-e827-4f71-8958-ba13b1adb9e2/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "2639,816 2680,816 2680,837 2639,837",
+				},
+				{
+					href: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Potenz%2C_Wurzel_und_Logarithmus.svg/1920px-Potenz%2C_Wurzel_und_Logarithmus.svg.png",
+					tags: [],
+					shape: "polygon",
+					coords: "2944,1011 3308,1011 3308,1375 2944,1375",
+				},
+				{
+					href: "Documents/Equation-3f3ee4b0-9acb-44cf-85f7-3ab26139e49b/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "2640,1139 2663,1139 2663,1165 2640,1165",
+				},
+				{
+					href: "Documents/Equation-c1c948f1-5077-4982-931f-5b34eb9c42b9/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "2640,1174 2681,1174 2681,1195 2640,1195",
+				},
+				{
+					href: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Potenz%2C_Wurzel_und_Logarithmus.svg/1920px-Potenz%2C_Wurzel_und_Logarithmus.svg.png",
+					tags: [],
+					shape: "polygon",
+					coords: "3714,633 4078,633 4078,997 3714,997",
+				},
+				{
+					href: "Documents/Equation-df97d0a0-5017-47f7-ba42-035f1ad84ddb/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "3417,740 3494,740 3494,761 3417,761",
+				},
+				{
+					href: "Documents/Equation-04783736-b9db-46f9-bca0-baf129c750d5/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "3417,764 3533,764 3533,790 3417,790",
+				},
+				{
+					href: "Documents/Equation-3848f509-2bb9-49ae-8605-082fa30822f5/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "3417,797 3492,797 3492,826 3417,826",
+				},
+				{
+					href: "Documents/Equation-29d3551e-d83c-412a-96af-47ae7e9781e2/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "3417,825 3458,825 3458,846 3417,846",
+				},
+				{
+					href: "Documents/Equation-88b88458-46ae-4528-8ece-5aaf3e1480a8/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "3466,1142 3727,1142 3727,1171 3466,1171",
+				},
+				{
+					href: "Documents/Equation-bb9afb1e-0fb0-472c-b217-7afb04fd1e59/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "3466,1215 3727,1215 3727,1278 3466,1278",
+				},
+				{
+					href: "Documents/Equation-75b51586-f1bb-4d17-a8c3-6fe26062de53/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "3466,1333 3648,1333 3648,1365 3466,1365",
+				},
+				{
+					href: "Documents/logarithmengesetze1-521d2613-4de5-4166-b221-7b1decb691bf/logarithmengesetze1.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "3837,1132 4521,1132 4521,2093 3837,2093",
+				},
+				{
+					href: "Documents/Bildschirmfoto%202024--9b41f519-9c48-4576-9659-66f72492fb88/Bildschirmfoto%202024-03-24%20um%2013.24.17.png",
+					tags: [],
+					shape: "polygon",
+					coords: "2925,1457 3360,1457 3360,1784 2925,1784",
+				},
+				{
+					href: "Documents/Equation-d0117f83-b6d4-4dbd-a893-784458571bcb/Equation.pdf",
+					tags: [],
+					shape: "polygon",
+					coords: "2559,1582 2897,1582 2897,1661 2559,1661",
+				}
+			]
+		}
+	]
+;
+
+function loadTOC(elementToAddTo, slidesAtLevel) {
+	if (!slidesAtLevel)
+		return;
+		
+	var listElement = document.createElement("ul");
+	
+	for (var slideIndex = 0; slideIndex < slidesAtLevel.length; ++slideIndex) {
+		var title = slidesAtLevel[slideIndex].title;
+		var thumbnail = slidesAtLevel[slideIndex].thumbnail;
+		var image = slidesAtLevel[slideIndex].image;
+		var childHierarchy = slidesAtLevel[slideIndex].childHierarchy;
+
+		var listItemElement = document.createElement("li");
+		if (image) {
+			slides.push(slidesAtLevel[slideIndex]);
+
+			var anchorElement = document.createElement("a");
+			anchorElement.setAttribute("href", "javascript:goToSlideAtIndex("+((slides.length) - 1)+");");
+			var imageElement = document.createElement("img");
+			imageElement.setAttribute("src", thumbnail);
+			anchorElement.appendChild(imageElement);
+			anchorElement.appendChild(document.createTextNode(title));
+			listItemElement.appendChild(anchorElement);
+		}
+		else {
+			var imageElement = document.createElement("img");
+			imageElement.setAttribute("src", thumbnail);
+			listItemElement.appendChild(imageElement);
+			listItemElement.appendChild(document.createTextNode(title));
+		}	
+		loadTOC(listItemElement, childHierarchy);
+		listElement.appendChild(listItemElement);
+	}
+	
+	elementToAddTo.appendChild(listElement);
+}
+
+function show(id) {
+	document.getElementById(id).style.visibility = "visible";
+}
+function hide(id) {
+	document.getElementById(id).style.visibility = "hidden";
+}
+
+function showNavigation() {
+	document.getElementById('tocIcon').style.opacity = 0.5;
+	document.getElementById('tocIcon').style.filter = "alpha(opacity=50)";
+	document.getElementById('previousIcon').style.opacity = 0.5;
+	document.getElementById('previousIcon').style.filter = "alpha(opacity=50)";
+	document.getElementById('nextIcon').style.opacity = 0.5;
+	document.getElementById('nextIcon').style.filter = "alpha(opacity=50)";
+}
+function hideNavigation() {
+	document.getElementById('tocIcon').style.opacity = 0;
+	document.getElementById('tocIcon').style.filter = "alpha(opacity=0)";
+	document.getElementById('previousIcon').style.opacity = 0;
+	document.getElementById('previousIcon').style.filter = "alpha(opacity=0)";
+	document.getElementById('nextIcon').style.opacity = 0;
+	document.getElementById('nextIcon').style.filter = "alpha(opacity=0)";
+}
+
+var showNavigationTimeout = null;
+
+function goToSlideAtIndex(slideIndex, silent) {
+	currentSlideIndex = slideIndex;
+	
+	document.getElementById("activeSlide").src = slides[slideIndex].image;
+	if (slides[slideIndex].imageSize) {
+		document.getElementById("activeSlide").width = slides[slideIndex].imageSize.width;
+		document.getElementById("activeSlide").height = slides[slideIndex].imageSize.height;
+	}
+
+	var title = slides[slideIndex].title;
+	window.document.title = projectTitle + " \u2014 " + title;
+	
+	var imagemap = slides[slideIndex].imagemap;
+	var mapElement = document.getElementById("activeSlideMap");
+	while (mapElement.firstChild) {
+		mapElement.removeChild(mapElement.firstChild);
+	}
+	if (imagemap) {
+		for (var imagemapIndex = 0; imagemapIndex < imagemap.length; ++imagemapIndex) {
+			var href = imagemap[imagemapIndex].href;
+			var shape = imagemap[imagemapIndex].shape;
+			var coords = imagemap[imagemapIndex].coords;
+			var areaElement = document.createElement("area");
+			areaElement.setAttribute("href", href);
+			areaElement.setAttribute("coords", coords);
+			areaElement.setAttribute("shape", shape);
+			mapElement.appendChild(areaElement);
+		}
+	}
+
+	if (currentSlideIndex == 0) {
+		hide('previousIcon');
+	}
+	else {
+		show('previousIcon');
+	}
+
+	if (currentSlideIndex+1 == slides.length) {
+		hide('nextIcon');
+	}
+	else {
+		show('nextIcon');
+	}
+
+	// kludge: force the hover color to go away on touch devices
+	if (isTouchDevice) {
+		document.getElementById('previousIcon').style.backgroundColor = "#fff";
+		document.getElementById('nextIcon').style.backgroundColor = "#fff";
+	}
+
+	if (!silent) {
+		if (history.pushState) {
+			if (slideIndex == 0)
+				history.pushState(null, document.title, window.location.pathname + window.location.search);
+			else
+				history.pushState(null, document.title, '#'+slideIndex);
+		}
+		else {
+			location.hash = '#'+slideIndex;
+		}
+	}
+	
+	clearTimeout(showNavigationTimeout);
+	showNavigation();
+	showNavigationTimeout = setTimeout('hideNavigation()', 3000);
+}
+function goToFirstSlide() {
+	goToSlideAtIndex(0);
+}
+function goToLastSlide() {
+	if (slides.length > 0) {
+		goToSlideAtIndex(slides.length - 1);
+	}
+}
+function goToPreviousSlide() {
+	if (currentSlideIndex > 0) {
+		goToSlideAtIndex(currentSlideIndex-1);
+	}
+}
+function goToNextSlide() {
+	if (currentSlideIndex+1 < slides.length) {
+		goToSlideAtIndex(currentSlideIndex+1);
+	}
+}
+function goToSlideWithUUID(uuid) {
+	for (var slideIndex = 0; slideIndex < slides.length; ++slideIndex) {
+		if (slides[slideIndex].uuid == uuid) {
+			goToSlideAtIndex(slideIndex);
+			break;
+		}
+	}
+}
+
+window.onpopstate = function(event) {
+	var indexFromHash = window.location.hash.replace('#', '');
+	if (indexFromHash)
+		currentSlideIndex = parseInt(indexFromHash);
+	else
+		currentSlideIndex = 0;
+	goToSlideAtIndex(currentSlideIndex, true);
+};
+
+window.onload = function () {
+	loadTOC(document.getElementById("toc"), slideHierarchy);
+
+	var indexFromHash = window.location.hash.replace('#', '');
+	if (indexFromHash)
+		currentSlideIndex = parseInt(indexFromHash);
+	goToSlideAtIndex(currentSlideIndex);
+	
+	var autoHideTOC = true;
+	if (isSafari && !isTouchDevice) // kludge: with Safari on the Mac we have to briefly show the TOC for TOC scrolling to work
+		autoHideTOC = false;
+	if (autoHideTOC)
+		hide('toc');
+
+	document.getElementById('tocIcon').onmouseover=function(){
+		show('toc');
+	};
+	document.getElementById('slide').onmouseover=function(){
+		hide('toc');
+	};
+	document.getElementById('previousIcon').onmousedown=function(){
+		goToPreviousSlide();
+	};
+	document.getElementById('nextIcon').onmousedown=function(){
+		goToNextSlide();
+	};
+
+	document.getElementById('slide').onmousemove=function(){
+		clearTimeout(showNavigationTimeout);
+		showNavigation();
+		showNavigationTimeout = setTimeout('hideNavigation()', 2000);
+	};
+	document.getElementById('navigation').onmousemove=function(){
+		clearTimeout(showNavigationTimeout);
+		showNavigation();
+	};
+	document.getElementById('navigation').onmouseout=function(){
+		clearTimeout(showNavigationTimeout);
+		hideNavigation();
+	};
+	
+	if (slides.length <= 1) {
+		hide('toc');
+		hide('tocIcon');
+		hide('previousIcon');
+		hide('nextIcon');
+	}
+
+	document.onkeydown = function(event) {
+		event = event || window.event;
+		if (event.keyCode == '37' || event.keyCode == '38') // left or up
+			goToPreviousSlide();
+	    else if (event.keyCode == '39' || event.keyCode == '40') // right or down
+			goToNextSlide();
+	};
+}
+</script> 
+</head> 
+<body>
+	<table id="slide">
+		<tr>
+			<td>
+				<img id="activeSlide" usemap="#activeSlideMap" />
+				<map id="activeSlideMap" name="activeSlideMap"></map>
+			</td>
+		</tr>
+	</table>
+	<div id="navigation">
+		<div id="tocIcon">&#9776;</div>
+		<div id="previousIcon">&#9650;</div>
+		<div id="nextIcon">&#9660;</div>
+	</div>
+	<div id="toc"></div>
+</body>
+</html>
